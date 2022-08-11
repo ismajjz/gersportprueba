@@ -1,0 +1,218 @@
+.border {
+border: 01px solid black;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "afa afa afa"
+    "cartelera cartelera cartelera"
+    "puma puma puma"
+    "footer footer footer";
+    column-gap: 10px;
+    row-gap: 10px;
+
+    height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: red;
+}
+
+nav {
+  grid-area: nav;
+  background-color: hotpink;
+}
+
+footer {
+  grid-area: footer;
+  background-color: blue;
+}
+
+article#afa {
+  grid-area: afa;
+  background-color: lawngreen;
+}
+
+article#cartelera {
+  grid-area: cartelera;
+  background-color: yellow;
+}
+
+article#puma {
+  grid-area: puma;
+  background-color: rebeccapurple;
+}
+
+
+/********** DISEÑO MOVIL/TABLETA VERTICAL *******/
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  #grilla {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 280px 200px 200px 120px;
+    grid-template-areas: 
+    "header header header"
+    "nav afa afa"
+    "nav cartelera cartelera"
+    "nav puma puma"
+    "nav footer footer";
+  }
+}
+
+/********** DISENO MOVIL/TABLETA HORIZONTAL *******/
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  #grilla {
+    grid-template-rows: 100px 40px 200px 150px 150px 100px;
+    grid-template-columns: none
+    "header header header"
+    "nav nav nav"
+    "afa afa afa"
+    "cartelera cartelera cartelera"
+    "puma puma puma"
+    "footer footer footer";
+  }
+}
+
+/**********DISEÑO DESKTOP***************/
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+  #grilla {
+  grid-template-areas:
+  "header header header"
+  "nav nav nav"
+  "afa afa afa"
+  "cartelera cartelera cartelera"
+  "puma puma puma"
+  "footer footer footer";
+  grid-template-rows: 150px 80px 500px 200px 200px 125px;
+  grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/************CSS INDEX GENERAL ****************/
+
+
+
+
+
+
+
+
+
+/******************HEADER********************/
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/* ****************BARRA DE NAVEGACION.******************** */
+.cabecera {
+  background-color: rgb(40, 114, 226);
+}
+.cabecera button {
+  background-color: #b87b7b00;
+      position: relative;
+      left: 60%;
+      bottom: 70px;
+      margin: 1%;
+      border: none;
+  }
+
+
+/* ****************BARRA DE BUSQUEDA. ******************** */
+  .barrasearch {
+      position: absolute;
+      left: 650px;
+      top: 90px;
+  }
+  .barrasearch input {
+      border-color: #ffffff;
+      background-color: #353535;
+      font-size: 20px;
+      width: 330px;
+      height: 40px;
+      border-radius: 35px;
+  }
+  .barrasearch button {
+
+      background-color: #00000054;
+      position: relative;
+      right: 50px;
+      width: 40px;
+      height: 35px;
+      top: -50px;
+      border-radius: 35px;
+      border-bottom: 01px;
+}
+
+
+
+
+
+/* **************LOGO PAGINA**************** */
+.cabecera__logo {
+  background-color: rgba(40, 114, 226, 0);
+}
+
+
+/* ************************MENU NAVBAR********************** */
+ nav.border {
+  background-color: #ffffff;
+}
+
+ nav.border ul {
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  list-style-type: none;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 25px;
+  bottom: 35px;
+}
+
+ nav.border ul li {
+  display: inline;
+  margin: 20px;
+  padding: 6px;
+  background-color: rgb(40, 114, 226);
+  border-radius: 08px;
+  border-bottom: 03px solid; color: rgb(40, 114, 226) ;
+}
+
+ nav.border ul li a {
+  background-color: rgba(40, 114, 226, 0);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav.border ul li a:hover {
+  transition: 0.5s; color: rgb(0, 0, 0);
+}
+
+
+/* *********PORTADA AFA.******** */
+article#afa {
+overflow: hidden;
+width: 100%;
+object-fit: fill;
+position: relative;
+left: 15%;
+
+}
